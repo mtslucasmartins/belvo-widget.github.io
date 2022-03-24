@@ -1,0 +1,173 @@
+* {
+  outline: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.background-color {
+  background-color: #FFF;
+  color: #000
+}
+
+#btn-download-resume {
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  transition: ease-in-out .15s
+}
+
+#btn-download-resume:hover {
+  background-color: black;
+  color: white;
+}
+
+.page-wrapper {
+  font-family: 'Red Hat Mono', monospace;
+  /* font-family: 'Courier New', Courier, monospace; */
+}
+
+.content .social-media-icons ul {
+  list-style: none;
+}
+
+.custom-shadow-sm {
+  box-shadow: 1px 2px 5px #d2d2d2;
+}
+
+.social-media-icons ul li {
+  display: inline-block;
+  margin: .25rem .25rem;
+  box-shadow: 1px 2px 5px #8c8c8c;
+  border-radius: 50%;
+}
+
+.social-media-icons ul li a {
+  text-decoration: none;
+}
+
+.h-80 {
+  height: 80%;
+}
+
+.h-85 {
+  height: 85%;
+}
+
+.h-15 {
+  height: 15%;
+}
+
+.h-10 {
+  height: 10%;
+}
+
+
+/* arrow common style */
+
+.arrow {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-top: 2px solid #000;
+  border-right: 2px solid #000;
+}
+
+.arrow-top {
+  transform: rotate(-45deg);
+}
+
+.arrow-right {
+  transform: rotate(45deg);
+}
+
+.arrow-bottom {
+  transform: rotate(135deg);
+}
+
+.arrow-left {
+  transform: rotate(-135deg);
+}
+
+.arrow-top-narrow {
+  transform: rotate(-45deg) skew(-15deg, -15deg);
+}
+
+.arrow-top-wide {
+  transform: rotate(-45deg) skew(7deg, 7deg);
+}
+
+.arrow-top-left {
+  transform: rotate(-90deg) skew(-10deg, -10deg);
+}
+
+.arrow-top-right {
+  transform: rotate(0) skew(-10deg, -10deg);
+}
+
+.arrow-bottom-left {
+  transform: rotate(180deg) skew(-10deg, -10deg);
+}
+
+.arrow-bottom-right {
+  transform: rotate(90deg) skew(-10deg, -10deg);
+}
+
+
+/* 
+
+
+
+
+
+
+
+ */
+
+#home-left, #home-right {
+  position: relative;
+  height: 100%;
+  width: 50%;
+  background: #000;
+  /* float: left; */
+}
+
+#home-left:after {
+  content: '';
+  line-height: 0;
+  font-size: 0;
+  width: 0;
+  height: 0;
+  border-top: 100vh solid #000;
+  border-bottom: 0px solid transparent;
+  border-left: 0px solid transparent;
+  border-right: 50px solid transparent;
+  position: absolute;
+  top: 0;
+  right: -50px;
+  height: 100%;
+}
+
+#home-right {
+  margin-left: 60px;
+  width: 50%;
+}
+
+#home-right:before {
+  content: '';
+  line-height: 0;
+  font-size: 0;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 100vh solid #000;
+  border-left: 50px solid transparent;
+  border-right: 0px solid #000;
+  position: absolute;
+  top: -50px;
+  left: -50px;
+}
