@@ -1,0 +1,163 @@
+* {
+  outline: none;
+}
+
+html, body {
+  width: 100%;
+  /* height: 100%; */
+  margin: 0;
+  padding: 0;
+  
+  background-color: #C8E6C9;
+}
+
+.page-wrapper {
+  margin-top: 60px;
+  font-family: 'Red Hat Mono', monospace;
+  /* font-family: 'Courier New', Courier, monospace; */
+}
+
+.minesweeper-settings {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  /* box-shadow: 2px 2px 22px #888; */
+  z-index: 1;
+  padding: .25rem;
+}
+
+.minesweeper-wrapper {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+  padding: 1.5rem;
+  background-color: #C8E6C9;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+.minesweeper-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.minesweeper-row {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  height: 35px;
+  display: block;
+}
+
+.minesweeper-block {
+  position: relative;
+  z-index: 99;
+  /*  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*  */
+  width: 30px;
+  height: 30px;
+  margin: 2px 2px;
+  /*  */
+  transition: ease-out .1s;
+  /*  */
+  background-color: #81C784;
+  border: solid 1px #aaa;
+  border-radius: 50%;
+  box-shadow: inset 1px -5px 0px rgba(0, 0, 0, 0.05), inset 0px -6px 0px rgba(0, 0, 0, 0.15);
+}
+
+.minesweeper-block:hover {
+  cursor: pointer;
+  background-color: #4CAF50;
+}
+
+.minesweeper-block:active {
+  height: 25px;
+  margin-top: 7px;
+  background-color: #4CAF50;
+  box-shadow: inset 1px -5px 0px rgba(0, 0, 0, 0.05), inset 0px -6px 0px rgba(0, 0, 0, 0.15);
+}
+
+.minesweeper-block.block-mine, .minesweeper-block.block-flag {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: inherit;
+}
+
+.minesweeper-block.block-mine {
+  background-image: url(../assets/minesweeper/rip-3.webp);
+}
+
+.minesweeper-block.block-flag {
+  background-image: url(../assets/minesweeper/warning.png);
+  background-size: 25px;
+}
+
+.minesweeper-block.block-0 {
+  background-color: #e7e7e7;
+  visibility: hidden;
+}
+
+.minesweeper-block.block-1 {
+  background-color: #fff;
+  color: blue;
+}
+
+.minesweeper-block.block-2 {
+  color: green;
+}
+
+.minesweeper-block.block-3 {
+  color: red;
+}
+
+
+/*.minesweeper-block.block-4 { }
+.minesweeper-block.block-5 { }
+.minesweeper-block.block-6 { }
+.minesweeper-block.block-7 { }
+.minesweeper-block.block-8 { }*/
+
+.block-tip {
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: inset 0px 2px 2px #ddd;
+}
+
+.block-tip:hover {
+  background-color: #e7e7e7;
+}
+
+.block-tip span {
+  border-radius: 50%;
+  top: 0;
+}
+
+
+/* .explosion-animation {
+  background-image: url(../assets/minesweeper/explosion-1.gif);
+  background-position: center;
+  background-size: contain;
+  width: 500%;
+  background-repeat: no-repeat;
+  height: 500%;
+  z-index: 1000;
+  position: absolute;
+  animation-iteration-count: 1;
+} */
+
+/* footer {
+  position: fixed;
+  height: 100px;
+  bottom: 0;
+  width: 100%;
+} */
